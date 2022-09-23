@@ -1,0 +1,27 @@
+body {
+  background-color: rgb(176, 225, 233);
+}
+
+.containerRow {
+  display: flex;
+  justify-content: center;
+}
+
+.gridContainer {
+  
+  display: grid;
+  width: 600px;
+  height: 600px;
+  background-color: aliceblue;
+
+}
+
+.gridSquare {
+  text-align: center;
+  border: solid 1px;
+  border-style: dotted;
+  border-color: antiquewhite;
+  cursor: crosshair;
+
+}
+

@@ -1,27 +1,34 @@
-let squareNum = 4;
-createGrid(squareNum);
+const gridContainer = document.querySelector('.gridContainer');
+
+//get grid size from html form:
+const form = document.forms['form'];
+form.onsubmit = function(e) {
+  e.preventDefault();
+  const gridSize = document.form.gridSize.value;
+  createGrid(gridSize);
+  
+//make the cursor paint the canvas  
+const grid = document.querySelectorAll('.gridSquare');
+
+grid.forEach(grid => grid.addEventListener('mousemove', (e) => {
+  e.target.setAttribute('style', 'background: red; transition: 400ms')
+  }));
+}
 
 
-function createGrid(squareNum) {
+// aux functions
+function createGrid(gridSize) {
 
-  for (let i = 0; i < squareNum * squareNum; i++) {
-    const gridContainer = document.querySelector('.gridContainer');
+  for (let i = 0; i < gridSize * gridSize; i++) {
+    
     const gridSquare = gridContainer.appendChild(document.createElement('div'));
     gridSquare.classList.add('gridSquare');
     gridSquare.setAttribute('id', i + 1);
     gridSquare.textContent = "";
     gridContainer.appendChild(gridSquare);
+    gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+    gridContainer.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
   }
 }
-
-
-/* mouse click event
-
-const grid = document.querySelectorAll('.gridSquare');
-
-grid.forEach(grid => grid.addEventListener('mousemove', (e) => {
-  e.target.style.background = 'grey'
-}));
-*/
 
 

@@ -6,10 +6,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Etch-a-Sketch</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="javascript.js"></script>
+  <script src="javascript.js" defer></script>
 </head>
 <body>
+  <div class="header">
+  </div>
   
-  
+  <div class="containerRow">
+    <div></div>
+    <div class="userInput">
+      <form name="form" method="GET">
+        <span class="prompt">
+          <label>Grid Size (x²):</label>
+          <input id="gridSize" type="text" pattern="[0-9]+" maxlength="2" 
+            name="gridSize">
+          <input type="submit" value="Submit">
+        </span>
+      </form>
+    </div>
+    <div></div>
+  </div>
+<br>
+  <div class="containerRow">
+    <div></div>
+    <div class="gridContainer"></div>
+    <div></div>
+  </div>
+<br>
+  <div class="containerRow">
+    <div></div>
+    <div>
+      <button onclick="location.reload(window)">Clear</button>
+    </div>
+    <div></div>
+  </div>
+
 </body>
 </html>
