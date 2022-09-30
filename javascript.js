@@ -11,7 +11,7 @@ form.onsubmit = function(e) {
 const grid = document.querySelectorAll('.gridSquare');
 
 grid.forEach(grid => grid.addEventListener('mousemove', (e) => {
-  e.target.setAttribute('style', 'background: red; transition: 400ms')
+  e.target.setAttribute('style', 'background: darkgoldenrod; transition: 400ms')
   }));
 }
 
