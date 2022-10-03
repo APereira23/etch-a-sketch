@@ -1,6 +1,6 @@
 APereiras's Etch-a-Sketch: a Javascript project for The Odin Project's Foundations Course!
 
-The program creates a custom grid with user-defined box sizes. It paints a random color in each box the mouse hovers.
+The program creates a custom grid with user-defined box sizes. It then paints a random color in each box the mouse hovers, darkening the colors by repeatedly hovering a previously colored box.
 
 This project gave me a much clearer understanding of the fundamental DOM manipulation tools at my disposal (creating and editing elements, changing attributes, using event listeners, etc.).
 
